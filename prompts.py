@@ -1,7 +1,7 @@
 from groq import Groq
 import re
 
-client = Groq(api_key="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")
+client = Groq(api_key="your api key")
 
 
 def clean_prompt(line: str) -> str | None:
