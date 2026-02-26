@@ -1,96 +1,106 @@
-AI Explainer Video Generator 🎥
-Project Overview
+# 🎥 AI Explainer Video Generator
 
-This project generates a simple AI-based explainer video automatically.
+## 📌 Project Overview
 
-It works by:
+This project automatically generates a simple AI-based explainer video using Python.
 
-Selecting a topic
+It follows a complete pipeline:
 
-Generating a script for that topic
+1. Select a topic  
+2. Generate a script  
+3. Split the script into sentences  
+4. Generate an image for each sentence  
+5. Convert each sentence into voice  
+6. Synchronize images and voice into a final video  
 
-Splitting the script into sentences
+The final output file is:
 
-Generating an image for each sentence
-
-Converting each sentence into voice
-
-Synchronizing images and audio into a final video
-
-The final output is a synced educational-style video called:
-
+```
 final_video.mp4
+```
 
-How It Works
+---
 
-main.py → Controls the full pipeline
+## ⚙️ System Architecture
 
-idea_generation.py → Selects a topic
+- **main.py** → Controls the entire pipeline  
+- **idea_generation.py** → Selects a topic  
+- **script.py** → Generates the script  
+- **image.py** → Downloads and prepares images  
+- **voice.py** → Converts text to speech  
+- **video.py** → Combines images and audio into a synced video  
 
-script.py → Generates the script
+Each sentence receives:
+- 🎤 Its own generated voice file  
+- 🖼 Its own related image  
+- ⏱ Proper synchronization in the final video  
 
-image.py → Downloads and prepares images
+---
 
-voice.py → Converts text to speech
+## ▶️ How To Run
 
-video.py → Combines images and audio into video
+### 1️⃣ Install Required Libraries
 
-Each sentence gets:
+```bash
+pip install moviepy pyttsx3 pillow icrawler
+```
 
-Its own generated image
+### 2️⃣ Run the Project
 
-Its own voice audio
-
-Synced timing in the final video
-
-How To Run
-
-Install the required Python libraries, then run:
-
+```bash
 py main.py
+```
 
-The final video will be generated in the project folder.
+After execution, the final video will be generated in the project folder as:
 
-Technologies Used
+```
+final_video.mp4
+```
 
-Python
+---
 
-MoviePy
+## 🛠 Technologies Used
 
-pyttsx3 (Text-to-Speech)
+- Python  
+- MoviePy  
+- pyttsx3 (Text-to-Speech)  
+- Pillow (Image Processing)  
+- icrawler (Image Downloading)  
 
-PIL (Image processing)
+---
 
-icrawler (Image downloading)
+## 💡 Honest Reflection
 
-Honest Reflection
+I would like to honestly mention that I did not have strong prior experience with multimedia processing, automation pipelines, or video generation before starting this project.
 
-I would like to honestly mention that I did not have strong prior experience with video generation, automation pipelines, or multimedia processing before starting this project.
+This project was developed through learning, experimentation, debugging, and gradual improvement. During development, I faced multiple challenges such as:
 
-This project was built through learning, experimenting, debugging errors, and improving step by step. I encountered multiple issues such as sync problems, module errors, and text rendering issues, and worked through them to make the system function correctly.
+- Audio and image synchronization issues  
+- Dependency and module errors  
+- Text rendering problems  
+- Pipeline structure improvements  
 
-While I may not fully understand every internal detail of each library used, I understand:
+I worked through these issues step by step to make the system functional and properly synchronized.
 
-The overall system architecture
+While I may not fully understand every internal implementation detail of the libraries used, I understand:
 
-The role of each file
+- The overall architecture of the system  
+- The role of each module  
+- The flow from topic → script → image → voice → video  
+- How to debug and improve the pipeline  
 
-How the pipeline flows from topic → script → image → voice → video
+This project represents my effort to learn by building something practical and functional.
 
-How to debug and modify the project
+---
 
-This project represents my effort to learn by building and improving something practical.
+## 🚀 Future Improvements
 
-Future Improvements
+- AI-based image generation instead of web crawling  
+- More natural cloud-based text-to-speech  
+- Subtitle animations  
+- Background music integration  
+- Web interface for user interaction  
 
-Better AI image generation
-
-More natural AI voice
-
-Subtitle animation
-
-Background music
-
-Web interface
+---
 
 Thank you for reviewing this project.
