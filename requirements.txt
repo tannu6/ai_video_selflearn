@@ -1,0 +1,10 @@
+streamlit
+moviepy
+pyttsx3
+Pillow
+icrawler
+groq
+requests
+numpy
+imageio
+imageio-ffmpeg
